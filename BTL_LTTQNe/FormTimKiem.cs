@@ -23,7 +23,7 @@ namespace BTL_LTTQNe
         public FormTimKiem()
         {
             InitializeComponent();
-            dataGridView1.DataSource = process.DocBang("select * from MonAn");  
+            dataGridView1.DataSource = process.DocBang("select * from NguyenLieu");  
 
         }
 
@@ -34,21 +34,41 @@ namespace BTL_LTTQNe
 
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-            dataGridView1.Columns[0].HeaderText = "Mã món ăn";
-            dataGridView1.Columns[1].HeaderText = "Tên món ăn";
-            dataGridView1.Columns[2].HeaderText = "Mã công dụng";
-			dataGridView1.Columns[3].HeaderText = "mã loại món ăn";
-            dataGridView1.Columns[4].HeaderText = "Cách làm";
-            dataGridView1.Columns[5].HeaderText = "Yêu cầu";
-            dataGridView1.Columns[6].HeaderText = "Đơn giá";
-
+            dataGridView1.Columns[0].HeaderText = "Mã nguyên liệu";
+            dataGridView1.Columns[1].HeaderText = "Tên guyên liệu";
+            dataGridView1.Columns[2].HeaderText = "Đơn vị tính";
+			dataGridView1.Columns[3].HeaderText = "Số lg";
+            dataGridView1.Columns[4].HeaderText = "Đơn giá nhập";
+            dataGridView1.Columns[5].HeaderText = "Đơn giá bán";
+            dataGridView1.Columns[6].HeaderText = "Công dụng";
+            dataGridView1.Columns[7].HeaderText = "Yêu cầu";
+            dataGridView1.Columns[8].HeaderText = "Chống chỉ định";
+            
 		}
-        //tôi muốn tìm kiếm món ăn theo loại món ăn
+
         private void button1_Click(object sender, EventArgs e)
         {
-			dataGridView1.DataSource = process.DocBang("select * from MonAn where MaLoaiMonAn = '" + textBox1.Text + "'");
 		}
 
+		private void button3_Click(object sender, EventArgs e)
+		{
+			dataGridView1.DataSource = process.DocBang("select * from NguyenLieu where ma_nguyen_lieu = '" + textBox1.Text + "'");
+
+		}
+
+
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+            reset();
+		}
+
+        private void reset()
+        {
+            textBox1.Text = "";
+			textBox2.Text = "";
+			comboBox1.Text = "";
+        }
 
 
 	}

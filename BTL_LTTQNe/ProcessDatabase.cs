@@ -10,7 +10,7 @@ namespace BTL_LTTQ_Ne
 {
 	internal class ProcessDatabase
 	{
-		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
+		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;Integrated Security=True";
 		SqlConnection con;
 		public void KetNoi()
 		{
