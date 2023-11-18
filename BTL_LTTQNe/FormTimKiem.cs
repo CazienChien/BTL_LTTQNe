@@ -50,24 +50,60 @@ namespace BTL_LTTQNe
         {
 		}
 
-		private void button3_Click(object sender, EventArgs e)
-		{
-			dataGridView1.DataSource = process.DocBang("select * from NguyenLieu where ma_nguyen_lieu = '" + textBox1.Text + "'");
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT * FROM NguyenLieu WHERE";
+            if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) &&!string.IsNullOrEmpty(textBox3.Text))
+            {
+                query += " ma_nguyen_lieu = '" + textBox1.Text + "' AND cong_dung = N'" + textBox2.Text + "'" + "' AND chong_chi_dinh = N'" + textBox3.Text + "'";
+            }
+            else if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                query += " ma_nguyen_lieu = '" + textBox1.Text + "'";
+            }
+            else if (!string.IsNullOrEmpty(textBox1.Text)&& !string.IsNullOrEmpty(textBox3.Text))
+            {
+                query += " ma_nguyen_lieu = '" + textBox1.Text + "'"+ " chong_chi_dinh = N'" + textBox3.Text + "'";
+            }
+            else if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
+            {
+                query += " ma_nguyen_lieu = '" + textBox1.Text + "'" + " cong_dung = N'" + textBox2.Text + "'";
+            }
+            else if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text))
+            {
+                query += " cong_dung = N'" + textBox2.Text + "'" + " chong_chi_dinh = N'" + textBox3.Text + "'";
+            }
+            else if (!string.IsNullOrEmpty(textBox2.Text))
+            {
+                query += " cong_dung = N'" + textBox2.Text + "'";
+            }
+            else if (!string.IsNullOrEmpty(textBox3.Text))
+            {
+                query += " chong_chi_dinh = N'" + textBox3.Text + "'";
+            }
+            else
+            {
+                // Không có giá trị nào được điền vào textbox, không thực hiện tìm kiếm
+                MessageBox.Show("Vui lòng nhập thông tin tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
-		}
+            dataGridView1.DataSource = process.DocBang(query);
 
+        }
 
-
-		private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
 		{
             reset();
-		}
+            dataGridView1.DataSource = process.DocBang("select * from NguyenLieu");
+        }
 
         private void reset()
         {
             textBox1.Text = "";
-			textBox2.Text = "";
-			comboBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+
         }
 
 
