@@ -23,5 +23,12 @@ namespace BTL_LTTQNe
 			otherForm.Show();
 			this.Hide();
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormTimkiemMonAn otherForm = new FormTimkiemMonAn();
+            otherForm.Show();
+            this.Hide();
+        }
+    }
 }

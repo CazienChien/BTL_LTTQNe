@@ -45,34 +45,37 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(276, 407);
+            this.button5.Location = new System.Drawing.Point(227, 407);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(92, 30);
             this.button5.TabIndex = 24;
             this.button5.Text = "Tìm nguyên liệu";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(152, 407);
+            this.button4.Location = new System.Drawing.Point(120, 407);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 30);
             this.button4.TabIndex = 23;
             this.button4.Text = "Tìm lại";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(152, 280);
+            this.button3.Location = new System.Drawing.Point(120, 320);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 30);
             this.button3.TabIndex = 22;
             this.button3.Text = "Tìm kiếm";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(28, 407);
+            this.button1.Location = new System.Drawing.Point(12, 408);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 30);
             this.button1.TabIndex = 21;
@@ -82,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 192);
+            this.label4.Location = new System.Drawing.Point(18, 223);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 13);
             this.label4.TabIndex = 20;
@@ -90,16 +93,16 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 189);
+            this.textBox2.Location = new System.Drawing.Point(86, 220);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 61);
+            this.textBox2.Size = new System.Drawing.Size(200, 61);
             this.textBox2.TabIndex = 19;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 138);
+            this.label3.Location = new System.Drawing.Point(53, 169);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 18;
@@ -108,34 +111,36 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 135);
+            this.comboBox1.Location = new System.Drawing.Point(86, 166);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 21);
+            this.comboBox1.Size = new System.Drawing.Size(200, 21);
             this.comboBox1.TabIndex = 17;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 80);
+            this.textBox1.Location = new System.Drawing.Point(86, 111);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 20);
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 16;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 83);
+            this.label2.Location = new System.Drawing.Point(13, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Tên nguyên liệu: ";
+            this.label2.Text = "Tên món ăn: ";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(383, 53);
+            this.dataGridView1.Location = new System.Drawing.Point(336, 53);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 384);
+            this.dataGridView1.Size = new System.Drawing.Size(463, 384);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 

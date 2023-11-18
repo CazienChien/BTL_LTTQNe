@@ -10,11 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-//-Form Tìm Kiếm:
-
-//Tìm kiếm nguyên liệu theo tên, công dụng và chống chỉ định 
-//Tìm kiếm món ăn theo loại, công dụng và tên món ăn
-
 namespace BTL_LTTQNe
 {
     public partial class FormTimKiem : Form
@@ -23,8 +18,16 @@ namespace BTL_LTTQNe
         public FormTimKiem()
         {
             InitializeComponent();
-            dataGridView1.DataSource = process.DocBang("select * from NguyenLieu");  
-
+            dataGridView1.DataSource = process.DocBang("select * from NguyenLieu");
+            dataGridView1.Columns[0].HeaderText = "Mã nguyên liệu";
+            dataGridView1.Columns[1].HeaderText = "Tên guyên liệu";
+            dataGridView1.Columns[2].HeaderText = "Đơn vị tính";
+            dataGridView1.Columns[3].HeaderText = "Số lg";
+            dataGridView1.Columns[4].HeaderText = "Đơn giá nhập";
+            dataGridView1.Columns[5].HeaderText = "Đơn giá bán";
+            dataGridView1.Columns[6].HeaderText = "Công dụng";
+            dataGridView1.Columns[7].HeaderText = "Yêu cầu";
+            dataGridView1.Columns[8].HeaderText = "Chống chỉ định";
         }
 
 		private void FormTimKiem_Load(object sender, EventArgs e)
@@ -34,15 +37,7 @@ namespace BTL_LTTQNe
 
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-            dataGridView1.Columns[0].HeaderText = "Mã nguyên liệu";
-            dataGridView1.Columns[1].HeaderText = "Tên guyên liệu";
-            dataGridView1.Columns[2].HeaderText = "Đơn vị tính";
-			dataGridView1.Columns[3].HeaderText = "Số lg";
-            dataGridView1.Columns[4].HeaderText = "Đơn giá nhập";
-            dataGridView1.Columns[5].HeaderText = "Đơn giá bán";
-            dataGridView1.Columns[6].HeaderText = "Công dụng";
-            dataGridView1.Columns[7].HeaderText = "Yêu cầu";
-            dataGridView1.Columns[8].HeaderText = "Chống chỉ định";
+            
             
 		}
 
@@ -83,11 +78,10 @@ namespace BTL_LTTQNe
             }
             else
             {
-                // Không có giá trị nào được điền vào textbox, không thực hiện tìm kiếm
+                // Không có giá trị nào được điền vào textbox
                 MessageBox.Show("Vui lòng nhập thông tin tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
             dataGridView1.DataSource = process.DocBang(query);
 
         }
@@ -105,7 +99,5 @@ namespace BTL_LTTQNe
             textBox3.Text = "";
 
         }
-
-
 	}
 }

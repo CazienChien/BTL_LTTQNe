@@ -56,9 +56,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(381, 48);
+            this.dataGridView1.Location = new System.Drawing.Point(340, 48);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 384);
+            this.dataGridView1.Size = new System.Drawing.Size(457, 384);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -75,7 +75,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(95, 75);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 20);
+            this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 3;
             // 
             // textBox3
@@ -83,7 +83,7 @@
             this.textBox3.Location = new System.Drawing.Point(95, 199);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(241, 61);
+            this.textBox3.Size = new System.Drawing.Size(211, 61);
             this.textBox3.TabIndex = 6;
             // 
             // label4
@@ -97,7 +97,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(26, 402);
+            this.button1.Location = new System.Drawing.Point(13, 402);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 30);
             this.button1.TabIndex = 8;
@@ -106,7 +106,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(150, 300);
+            this.button3.Location = new System.Drawing.Point(123, 301);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 30);
             this.button3.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(150, 402);
+            this.button4.Location = new System.Drawing.Point(123, 402);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 30);
             this.button4.TabIndex = 11;
@@ -126,9 +126,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(274, 402);
+            this.button5.Location = new System.Drawing.Point(232, 402);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(92, 30);
+            this.button5.Size = new System.Drawing.Size(89, 30);
             this.button5.TabIndex = 12;
             this.button5.Text = "Tìm món ăn";
             this.button5.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             this.textBox2.Location = new System.Drawing.Point(95, 117);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(241, 61);
+            this.textBox2.Size = new System.Drawing.Size(211, 61);
             this.textBox2.TabIndex = 13;
             // 
             // FormTimKiem
