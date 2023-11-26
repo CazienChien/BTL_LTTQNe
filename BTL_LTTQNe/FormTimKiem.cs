@@ -99,5 +99,12 @@ namespace BTL_LTTQNe
             textBox3.Text = "";
 
         }
-	}
+        Form1 form1 = new Form1();
+           private void button5_Click(object sender, EventArgs e)
+        {
+            Form1 otherForm = new Form1(2,sender);
+            otherForm.Show();
+            this.Hide();
+        }
+    }
 }

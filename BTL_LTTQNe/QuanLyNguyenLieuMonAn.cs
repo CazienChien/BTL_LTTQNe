@@ -14,7 +14,7 @@ namespace BTL_LTTQNe
 {
 	public partial class QuanLyNguyenLieuMonAn : Form
 	{
-		string stringcon = @"Data Source=DESKTOP-6CEG9RB\SQLEXPRESS;Initial Catalog=Food_Ind_Management;User ID=sa;Password=02052003";
+		string stringcon = @"Data Source=GBPC;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
 		SqlConnection con;
 		SqlCommand cmd;
 		ProcessDatabase Process = new ProcessDatabase();

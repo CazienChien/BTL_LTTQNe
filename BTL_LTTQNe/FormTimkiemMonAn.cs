@@ -78,7 +78,9 @@ namespace BTL_LTTQNe
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Form1 otherForm = new Form1(1,sender);
+            otherForm.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)

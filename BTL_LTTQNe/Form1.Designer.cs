@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelBar = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBaoCao = new System.Windows.Forms.Button();
+            this.btnPDB = new System.Windows.Forms.Button();
             this.btnQLMA = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelBar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panelBar.Controls.Add(this.button3);
             this.panelBar.Controls.Add(this.button2);
-            this.panelBar.Controls.Add(this.button1);
+            this.panelBar.Controls.Add(this.btnBaoCao);
+            this.panelBar.Controls.Add(this.btnPDB);
             this.panelBar.Controls.Add(this.btnQLMA);
             this.panelBar.Controls.Add(this.panel1);
             this.panelBar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -58,51 +61,55 @@
             this.panelBar.Size = new System.Drawing.Size(193, 515);
             this.panelBar.TabIndex = 3;
             // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 250);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(193, 65);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::BTL_LTTQNe.Properties.Resources.Them;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 185);
+            this.button2.Location = new System.Drawing.Point(0, 250);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 65);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
+            this.button2.TabIndex = 7;
+            this.button2.Text = "xxx";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBaoCao
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 65);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBaoCao.FlatAppearance.BorderSize = 0;
+            this.btnBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaoCao.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBaoCao.Image = global::BTL_LTTQNe.Properties.Resources.Baocao;
+            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 185);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(193, 65);
+            this.btnBaoCao.TabIndex = 6;
+            this.btnBaoCao.Text = "Xem báo cáo";
+            this.btnBaoCao.UseVisualStyleBackColor = true;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
+            // btnPDB
+            // 
+            this.btnPDB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPDB.FlatAppearance.BorderSize = 0;
+            this.btnPDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPDB.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPDB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPDB.Image = global::BTL_LTTQNe.Properties.Resources.Them;
+            this.btnPDB.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPDB.Location = new System.Drawing.Point(0, 120);
+            this.btnPDB.Name = "btnPDB";
+            this.btnPDB.Size = new System.Drawing.Size(193, 65);
+            this.btnPDB.TabIndex = 5;
+            this.btnPDB.Text = "Thêm phiếu đặt bàn";
+            this.btnPDB.UseVisualStyleBackColor = true;
+            this.btnPDB.Click += new System.EventHandler(this.btnPDB_Click);
             // 
             // btnQLMA
             // 
@@ -111,14 +118,15 @@
             this.btnQLMA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLMA.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLMA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnQLMA.Image = ((System.Drawing.Image)(resources.GetObject("btnQLMA.Image")));
+            this.btnQLMA.Image = global::BTL_LTTQNe.Properties.Resources.Them;
             this.btnQLMA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQLMA.Location = new System.Drawing.Point(0, 55);
             this.btnQLMA.Name = "btnQLMA";
             this.btnQLMA.Size = new System.Drawing.Size(193, 65);
             this.btnQLMA.TabIndex = 2;
-            this.btnQLMA.Text = "Thêm món ăn";
+            this.btnQLMA.Text = "Quản lý món ăn";
             this.btnQLMA.UseVisualStyleBackColor = true;
+            this.btnQLMA.Click += new System.EventHandler(this.btnQLMA_Click);
             // 
             // panel1
             // 
@@ -144,38 +152,71 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(3, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.Size = new System.Drawing.Size(50, 54);
             this.panel3.TabIndex = 6;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.Color.MintCream;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(193, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(805, 55);
-            this.panel2.TabIndex = 4;
+            this.panel4.BackgroundImage = global::BTL_LTTQNe.Properties.Resources.Contacts;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel4.Location = new System.Drawing.Point(12, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(32, 31);
+            this.panel4.TabIndex = 5;
             // 
-            // label1
+            // panelTop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(311, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý nguyên vật liệu và món ăn";
+            this.panelTop.BackColor = System.Drawing.Color.MintCream;
+            this.panelTop.Controls.Add(this.button1);
+            this.panelTop.Controls.Add(this.lblTitle);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(193, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1090, 55);
+            this.panelTop.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::BTL_LTTQNe.Properties.Resources.Search;
+            this.button1.Location = new System.Drawing.Point(1032, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 55);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(379, 14);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(311, 26);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Quản lý nguyên vật liệu và món ăn";
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(193, 55);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1090, 460);
+            this.panelDesktop.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(998, 515);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1283, 515);
+            this.Controls.Add(this.panelDesktop);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelBar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
@@ -183,8 +224,9 @@
             this.panelBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,13 +235,16 @@
         private System.Windows.Forms.Button btnQLMA;
         private System.Windows.Forms.Panel panelBar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPDB;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBaoCao;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelDesktop;
     }
 }
 

@@ -13,9 +13,23 @@ namespace BTL_LTTQNe
     public partial class Form1 : Form
     {
         private Button currentButton;
+        private Form activeForm;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public Form1(int i, object sender)
+        {
+            InitializeComponent();
+            if (i == 1)
+            {
+                OpenChildForm(new FormTimKiem(), sender);
+            }
+            if (i == 2)
+            {
+                OpenChildForm(new FormTimkiemMonAn(), sender);
+            }
         }
 
         private void ActiveButton(object btnSender)
@@ -24,18 +38,51 @@ namespace BTL_LTTQNe
             {
                 if (currentButton != (Button)btnSender)
                 {
-                    currentButton.BackColor = Color.FromArgb(37, 36, 81);
+                    DisableBtn(); // tat mau nut khac khi an
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = Color.FromArgb(27, 110, 59);
                     // mau nut khi nhan
                     currentButton.ForeColor = Color.White;
-                    currentButton.TextAlign = ContentAlignment.MiddleCenter;
-                    currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                    currentButton.ImageAlign = ContentAlignment.MiddleRight;
-                    currentButton.Padding = new Padding(40, 0, 0, 0);
+                    currentButton.Font = new Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
             }
         }
 
-		private void button1_Click(object sender, EventArgs e)
+        private void DisableBtn()
+        {
+            foreach(Control previous in panelBar.Controls) // duyet qua tat ca cac control trong panel
+            {
+                if(previous.GetType() == typeof(Button)) // neu control do la button
+                {
+                    previous.BackColor = Color.FromArgb(60, 179, 113);
+                    previous.ForeColor = Color.White;
+                    previous.Font = new Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+            {
+
+            }
+        }
+
+        public void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ActiveButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill; // fill form vao panel
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitle.Text = childForm.Text;
+        }
+
+	/*	private void button1_Click(object sender, EventArgs e)
 		{
 			FormTimKiem otherForm = new FormTimKiem();
 			otherForm.Show();
@@ -47,6 +94,30 @@ namespace BTL_LTTQNe
             FormTimkiemMonAn otherForm = new FormTimkiemMonAn();
             otherForm.Show();
             this.Hide();
+        }*/
+
+        private void btnQLMA_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+            OpenChildForm(new QuanLyMonAn(), sender);
+        }
+
+        private void btnPDB_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+            OpenChildForm(new QuanLyPhieuDatBan(), sender);
+
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+            OpenChildForm(new FormBaocao(), sender);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormTimKiem(), sender);
         }
     }
 }

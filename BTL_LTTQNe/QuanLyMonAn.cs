@@ -15,10 +15,9 @@ namespace BTL_LTTQNe
 {
 	public partial class QuanLyMonAn : Form
 	{
-		string stringcon = @"Data Source=DESKTOP-6CEG9RB\SQLEXPRESS;Initial Catalog=Food_Ind_Management;User ID=sa;Password=02052003";
+		string stringcon = @"Data Source=GBPC;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
 		SqlConnection con;
 		SqlCommand cmd;
-		ProcessDatabase Process = new ProcessDatabase();
 		SqlDataAdapter adapter = new SqlDataAdapter();	
 		DataTable table = new DataTable();
 		void loaddata()
@@ -69,16 +68,7 @@ namespace BTL_LTTQNe
 		
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			
-			int i;
-			i = dataGridView1.CurrentRow.Index;
-			txtmamonan.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-			txttenmonan.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-			txtcongdung.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
-			txtloai.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-			txtcachlam.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
-			txtyeucau.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
-
+		
 		}
 		private void btnthem_Click(object sender, EventArgs e)
 		{
@@ -134,6 +124,18 @@ namespace BTL_LTTQNe
 			}
 		}
 
-	
-	}
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+
+            int i;
+            i = dataGridView1.CurrentRow.Index;
+            txtmamonan.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            txttenmonan.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            txtcongdung.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            txtloai.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+            txtcachlam.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+            txtyeucau.Text = dataGridView1.Rows[i].Cells[5].Value.ToString();
+
+        }
+    }
 }

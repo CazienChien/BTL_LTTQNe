@@ -16,7 +16,7 @@ namespace BTL_LTTQNe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QuanLyPhieuDatBan());
+            Application.Run(new Form1());
         }
     }
 }

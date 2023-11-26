@@ -73,6 +73,16 @@ namespace BTL_LTTQNe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Baocao {
+            get {
+                object obj = ResourceManager.GetObject("Baocao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Contacts {
             get {
                 object obj = ResourceManager.GetObject("Contacts", resourceCulture);
@@ -106,6 +116,16 @@ namespace BTL_LTTQNe.Properties {
         internal static System.Drawing.Bitmap Search1 {
             get {
                 object obj = ResourceManager.GetObject("Search1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Them {
+            get {
+                object obj = ResourceManager.GetObject("Them", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

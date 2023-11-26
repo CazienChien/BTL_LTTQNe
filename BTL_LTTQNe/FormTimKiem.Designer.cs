@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -40,18 +39,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(436, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tìm kiếm nguyên liệu";
             // 
             // dataGridView1
             // 
@@ -132,6 +122,7 @@
             this.button5.TabIndex = 12;
             this.button5.Text = "Tìm món ăn";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label3
             // 
@@ -149,6 +140,16 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(211, 61);
             this.textBox2.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(436, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tìm kiếm nguyên liệu";
             // 
             // FormTimKiem
             // 
@@ -177,8 +178,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox textBox1;
@@ -190,5 +189,6 @@
 		private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
