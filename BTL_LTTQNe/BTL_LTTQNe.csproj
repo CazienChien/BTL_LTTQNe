@@ -78,11 +78,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietPhieuDatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietPhieuDatBan.designer.cs">
+      <DependentUpon>ChiTietPhieuDatBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaocao.designer.cs">
+      <DependentUpon>FormBaocao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTimKiem.cs">
       <SubType>Form</SubType>
@@ -111,8 +123,20 @@
     <Compile Include="QuanLyNguyenLieuMonAn.Designer.cs">
       <DependentUpon>QuanLyNguyenLieuMonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyPhieuDatBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhieuDatBan.designer.cs">
+      <DependentUpon>QuanLyPhieuDatBan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChiTietPhieuDatBan.resx">
+      <DependentUpon>ChiTietPhieuDatBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaocao.resx">
+      <DependentUpon>FormBaocao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
@@ -135,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyNguyenLieuMonAn.resx">
       <DependentUpon>QuanLyNguyenLieuMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhieuDatBan.resx">
+      <DependentUpon>QuanLyPhieuDatBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

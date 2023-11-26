@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BTL_LTTQ_Ne
 {
@@ -44,5 +45,24 @@ namespace BTL_LTTQ_Ne
 			DongKetNoi();
 		}
 
-	}
+        public void RunSQL(string sql)
+        {
+            SqlCommand cmd = new SqlCommand();
+            KetNoi();
+            cmd.CommandText = sql;
+            cmd.Connection = con;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            KetNoi();
+            cmd.Dispose();
+        }
+
+    }
 }
