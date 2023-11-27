@@ -49,7 +49,6 @@
             this.lbMaNL = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnTroVe = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -80,9 +79,9 @@
             this.groupBox1.Controls.Add(this.lbTenNL);
             this.groupBox1.Controls.Add(this.lbMaNL);
             this.groupBox1.Location = new System.Drawing.Point(11, 32);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(302, 435);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
@@ -90,7 +89,7 @@
             // txtSL
             // 
             this.txtSL.Location = new System.Drawing.Point(110, 99);
-            this.txtSL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSL.Margin = new System.Windows.Forms.Padding(2);
             this.txtSL.Multiline = true;
             this.txtSL.Name = "txtSL";
             this.txtSL.Size = new System.Drawing.Size(174, 26);
@@ -119,7 +118,7 @@
             // txtDonGiaNhap
             // 
             this.txtDonGiaNhap.Location = new System.Drawing.Point(110, 176);
-            this.txtDonGiaNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDonGiaNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtDonGiaNhap.Multiline = true;
             this.txtDonGiaNhap.Name = "txtDonGiaNhap";
             this.txtDonGiaNhap.Size = new System.Drawing.Size(174, 26);
@@ -128,7 +127,7 @@
             // txtYeuCau
             // 
             this.txtYeuCau.Location = new System.Drawing.Point(110, 262);
-            this.txtYeuCau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYeuCau.Margin = new System.Windows.Forms.Padding(2);
             this.txtYeuCau.Multiline = true;
             this.txtYeuCau.Name = "txtYeuCau";
             this.txtYeuCau.Size = new System.Drawing.Size(174, 26);
@@ -137,7 +136,7 @@
             // btnHuy
             // 
             this.btnHuy.Location = new System.Drawing.Point(213, 385);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(70, 32);
             this.btnHuy.TabIndex = 47;
@@ -148,7 +147,7 @@
             // btnLuu
             // 
             this.btnLuu.Location = new System.Drawing.Point(110, 385);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(70, 32);
             this.btnLuu.TabIndex = 46;
@@ -171,7 +170,7 @@
             // txtChongChiDinh
             // 
             this.txtChongChiDinh.Location = new System.Drawing.Point(110, 304);
-            this.txtChongChiDinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtChongChiDinh.Margin = new System.Windows.Forms.Padding(2);
             this.txtChongChiDinh.Multiline = true;
             this.txtChongChiDinh.Name = "txtChongChiDinh";
             this.txtChongChiDinh.Size = new System.Drawing.Size(174, 69);
@@ -180,7 +179,7 @@
             // txtCongDung
             // 
             this.txtCongDung.Location = new System.Drawing.Point(110, 219);
-            this.txtCongDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCongDung.Margin = new System.Windows.Forms.Padding(2);
             this.txtCongDung.Multiline = true;
             this.txtCongDung.Name = "txtCongDung";
             this.txtCongDung.Size = new System.Drawing.Size(174, 26);
@@ -189,7 +188,7 @@
             // txtTenNgL
             // 
             this.txtTenNgL.Location = new System.Drawing.Point(110, 56);
-            this.txtTenNgL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenNgL.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenNgL.Multiline = true;
             this.txtTenNgL.Name = "txtTenNgL";
             this.txtTenNgL.Size = new System.Drawing.Size(174, 26);
@@ -198,7 +197,7 @@
             // txtMaNgL
             // 
             this.txtMaNgL.Location = new System.Drawing.Point(110, 17);
-            this.txtMaNgL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNgL.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNgL.Multiline = true;
             this.txtMaNgL.Name = "txtMaNgL";
             this.txtMaNgL.Size = new System.Drawing.Size(174, 26);
@@ -267,15 +266,14 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnThoat);
-            this.groupBox2.Controls.Add(this.btnTroVe);
             this.groupBox2.Controls.Add(this.btnXoa);
             this.groupBox2.Controls.Add(this.btnSua);
             this.groupBox2.Controls.Add(this.btnThem);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(387, 32);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(560, 435);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
@@ -283,8 +281,8 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(464, 385);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Location = new System.Drawing.Point(401, 385);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(70, 32);
             this.btnThoat.TabIndex = 48;
@@ -292,21 +290,10 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnTroVe
-            // 
-            this.btnTroVe.Location = new System.Drawing.Point(350, 385);
-            this.btnTroVe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnTroVe.Name = "btnTroVe";
-            this.btnTroVe.Size = new System.Drawing.Size(70, 32);
-            this.btnTroVe.TabIndex = 47;
-            this.btnTroVe.Text = "Trở về";
-            this.btnTroVe.UseVisualStyleBackColor = true;
-            this.btnTroVe.Click += new System.EventHandler(this.btnTroVe_Click);
-            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(238, 385);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(296, 385);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(70, 32);
             this.btnXoa.TabIndex = 46;
@@ -316,8 +303,8 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(122, 385);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(180, 385);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(70, 32);
             this.btnSua.TabIndex = 45;
@@ -327,8 +314,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(12, 385);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(70, 385);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(70, 32);
             this.btnThem.TabIndex = 44;
@@ -340,7 +327,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 17);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -356,7 +343,7 @@
             this.ClientSize = new System.Drawing.Size(976, 499);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormQLNguyenLieu";
             this.Text = "FormQLNguyenLieu";
             this.groupBox1.ResumeLayout(false);
@@ -386,7 +373,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnTroVe;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.TextBox txtCongDung;
         private System.Windows.Forms.TextBox txtYeuCau;

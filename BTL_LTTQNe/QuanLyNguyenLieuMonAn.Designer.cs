@@ -38,7 +38,6 @@
             this.btnthem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnquaylai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -140,23 +139,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(384, 231);
             this.dataGridView1.TabIndex = 6;
             // 
-            // btnquaylai
-            // 
-            this.btnquaylai.Location = new System.Drawing.Point(250, 287);
-            this.btnquaylai.Name = "btnquaylai";
-            this.btnquaylai.Size = new System.Drawing.Size(102, 42);
-            this.btnquaylai.TabIndex = 18;
-            this.btnquaylai.Text = "Quay Lại";
-            this.btnquaylai.UseVisualStyleBackColor = true;
-            this.btnquaylai.Click += new System.EventHandler(this.btnquaylai_Click);
-            // 
             // QuanLyNguyenLieuMonAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(866, 373);
-            this.Controls.Add(this.btnquaylai);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnthem);
             this.Controls.Add(this.groupBox1);
@@ -183,6 +171,5 @@
 		private System.Windows.Forms.Button btnthem;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.Button btnquaylai;
 	}
 }

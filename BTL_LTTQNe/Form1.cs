@@ -118,5 +118,15 @@ namespace BTL_LTTQNe
             ActiveButton(sender);
             OpenChildForm(new FormQLNguyenLieu(), sender, title);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

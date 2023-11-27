@@ -48,7 +48,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnQuayLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -265,7 +264,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(79, 339);
+            this.btnXoa.Location = new System.Drawing.Point(125, 340);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 19);
@@ -274,22 +273,11 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnQuayLai
-            // 
-            this.btnQuayLai.Location = new System.Drawing.Point(174, 339);
-            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2);
-            this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(56, 19);
-            this.btnQuayLai.TabIndex = 4;
-            this.btnQuayLai.Text = "Quay lại";
-            this.btnQuayLai.UseVisualStyleBackColor = true;
-            // 
             // QuanLyPhieuDatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 403);
-            this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -325,7 +313,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxTenMonAn;
         private System.Windows.Forms.TextBox txtMaPhieu;

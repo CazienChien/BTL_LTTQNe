@@ -39,7 +39,12 @@ namespace BTL_LTTQNe
         {
             dgvThongKe.DataSource = process.DocBang("select * from ChiTietHoaDonNhap ");
         }
-        
+
+        private void btnTKPDB_Click(object sender, EventArgs e)
+        {
+            dgvThongKe.DataSource = process.DocBang("select * from PhieuDatBan");
+
+        }
     }
     
 }

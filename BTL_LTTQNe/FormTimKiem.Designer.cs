@@ -33,7 +33,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -85,18 +84,9 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Chống chỉ định:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 363);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Quay lại";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(123, 296);
+            this.button3.Location = new System.Drawing.Point(124, 363);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 30);
             this.button3.TabIndex = 10;
@@ -106,7 +96,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(123, 363);
+            this.button4.Location = new System.Drawing.Point(13, 363);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 30);
             this.button4.TabIndex = 11;
@@ -161,7 +151,6 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
@@ -183,7 +172,6 @@
 		private System.Windows.Forms.TextBox textBox1;
 		private System.Windows.Forms.TextBox textBox3;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
