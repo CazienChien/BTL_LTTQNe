@@ -27,7 +27,8 @@ namespace BTL_LTTQNe
             dataGridView1.Columns[5].HeaderText = "Đ/G bán";
             dataGridView1.Columns[6].HeaderText = "Công dụng";
             dataGridView1.Columns[7].HeaderText = "Yêu cầu";
-            dataGridView1.Columns[8].HeaderText = "Chống chỉ định";
+            dataGridView1.Columns[8].HeaderText = "Ngày nhập";
+            dataGridView1.Columns[9].HeaderText = "Chống chỉ định";
             txtMaNgL.Enabled = false;
             txtTenNgL.Enabled = false;
             txtSL.Enabled = false;
@@ -37,6 +38,7 @@ namespace BTL_LTTQNe
             //txtGiaBan.Enabled = false;
             cmbDonViTinh.Enabled = false;
             txtYeuCau.Enabled = false;
+            dtpNgayNhap.Enabled = false;
 
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
@@ -64,7 +66,9 @@ namespace BTL_LTTQNe
                 //txtGiaBan.Text = dataGridView1[5, e.RowIndex].Value.ToString();
                 txtCongDung.Text = dataGridView1[6, e.RowIndex].Value.ToString();
                 txtYeuCau.Text= dataGridView1[7, e.RowIndex].Value.ToString();
-                txtChongChiDinh.Text= dataGridView1[8, e.RowIndex].Value.ToString();
+                dtpNgayNhap.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                txtChongChiDinh.Text= dataGridView1[9, e.RowIndex].Value.ToString();
+                
                 
          
             }
@@ -94,6 +98,7 @@ namespace BTL_LTTQNe
                 //txtGiaBan.Enabled = true;
                 cmbDonViTinh.Enabled = true;
                 txtYeuCau.Enabled = true;
+                dtpNgayNhap.Enabled = true;
 
 
         }
@@ -127,6 +132,7 @@ namespace BTL_LTTQNe
                 //txtGiaBan.Enabled = false;
                 cmbDonViTinh.Enabled = false;
                 txtYeuCau.Enabled = false;
+                dtpNgayNhap.Enabled = false;
 
                 Reset();
 
@@ -155,10 +161,12 @@ namespace BTL_LTTQNe
             //txtGiaBan.Enabled = true;
             cmbDonViTinh.Enabled = true;
             txtYeuCau.Enabled = true;
+            dtpNgayNhap.Enabled=true;
 
             
 
         }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (btnThem.Enabled == true)
@@ -193,8 +201,9 @@ namespace BTL_LTTQNe
                         string congDung = txtCongDung.Text;
                         string yeuCau = txtYeuCau.Text;
                         string chongChiDinh = txtChongChiDinh.Text;
+                        DateTime ngayNhap= dtpNgayNhap.Value;
 
-                        string sql = $"INSERT INTO NguyenLieu (ma_nguyen_lieu, ten_nguyen_lieu, so_luong, don_gia_nhap, don_vi_tinh, cong_dung, yeu_cau, chong_chi_dinh)  VALUES ('{maNguyenLieu}', '{tenNguyenLieu}','{soLuong}','{donGiaNhap}', '{donViTinh}', '{congDung}', '{yeuCau}', '{chongChiDinh}')";
+                        string sql = $"INSERT INTO NguyenLieu (ma_nguyen_lieu, ten_nguyen_lieu, so_luong, don_gia_nhap, don_vi_tinh, cong_dung, yeu_cau, chong_chi_dinh, ngay_nhap)  VALUES (N'{maNguyenLieu}', N'{tenNguyenLieu}', N'{soLuong}', N'{donGiaNhap}', N'{donViTinh}', N'{congDung}', N'{yeuCau}', N'{chongChiDinh}', N'{ngayNhap}')";
 
 
                         ProcessDatabase db = new ProcessDatabase();
@@ -219,9 +228,10 @@ namespace BTL_LTTQNe
                 string congDung = txtCongDung.Text;
                 string yeuCau = txtYeuCau.Text;
                 string chongChiDinh = txtChongChiDinh.Text;
+                DateTime ngayNhap= dtpNgayNhap.Value;
 
 
-                string sql = $"UPDATE NguyenLieu SET ten_nguyen_lieu = N'{tenNguyenLieu}',don_vi_tinh=  N'{donViTinh}',so_luong=N'{soLuong}',don_gia_nhap='{donGiaNhap}',cong_dung=N'{congDung}',yeu_cau=N'{yeuCau}',chong_chi_dinh=N'{chongChiDinh}'  WHERE ma_nguyen_lieu = '{txtMaNgL.Text}'";
+                string sql = $"UPDATE NguyenLieu SET ten_nguyen_lieu = N'{tenNguyenLieu}',don_vi_tinh=  N'{donViTinh}',so_luong=N'{soLuong}',don_gia_nhap='{donGiaNhap}',cong_dung=N'{congDung}',yeu_cau=N'{yeuCau}',chong_chi_dinh=N'{chongChiDinh}', ngay_nhap= N'{ngayNhap}'  WHERE ma_nguyen_lieu = '{txtMaNgL.Text}'";
 
                 ProcessDatabase db = new ProcessDatabase();
                 db.CapNhat(sql);
@@ -281,6 +291,7 @@ namespace BTL_LTTQNe
             txtCongDung.Text = "";
             txtYeuCau.Text = "";
             txtChongChiDinh.Text = "";
+            
 
             txtMaNgL.Enabled = false;
             txtTenNgL.Enabled = false;
@@ -291,6 +302,7 @@ namespace BTL_LTTQNe
             //txtGiaBan.Enabled = false;
             cmbDonViTinh.Enabled = false;
             txtYeuCau.Enabled = false;
+            dtpNgayNhap.Enabled = false;
 
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
