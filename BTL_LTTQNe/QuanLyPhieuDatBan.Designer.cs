@@ -68,10 +68,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 66);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(7, 36);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(276, 207);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -81,7 +81,7 @@
             // 
             this.comboBoxNhanVien.FormattingEnabled = true;
             this.comboBoxNhanVien.Location = new System.Drawing.Point(92, 72);
-            this.comboBoxNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxNhanVien.Name = "comboBoxNhanVien";
             this.comboBoxNhanVien.Size = new System.Drawing.Size(132, 21);
             this.comboBoxNhanVien.TabIndex = 8;
@@ -90,7 +90,7 @@
             // 
             this.comboBoxKhachHang.FormattingEnabled = true;
             this.comboBoxKhachHang.Location = new System.Drawing.Point(92, 47);
-            this.comboBoxKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKhachHang.Name = "comboBoxKhachHang";
             this.comboBoxKhachHang.Size = new System.Drawing.Size(132, 21);
             this.comboBoxKhachHang.TabIndex = 8;
@@ -115,7 +115,7 @@
             "Phở bò",
             "Gà nướng"});
             this.comboBoxTenMonAn.Location = new System.Drawing.Point(92, 162);
-            this.comboBoxTenMonAn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTenMonAn.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTenMonAn.Name = "comboBoxTenMonAn";
             this.comboBoxTenMonAn.Size = new System.Drawing.Size(132, 21);
             this.comboBoxTenMonAn.TabIndex = 5;
@@ -125,7 +125,7 @@
             // 
             this.dtpNgayDatBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayDatBan.Location = new System.Drawing.Point(92, 102);
-            this.dtpNgayDatBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNgayDatBan.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayDatBan.Name = "dtpNgayDatBan";
             this.dtpNgayDatBan.Size = new System.Drawing.Size(94, 20);
             this.dtpNgayDatBan.TabIndex = 4;
@@ -134,7 +134,7 @@
             // 
             this.dtpNgayDung.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayDung.Location = new System.Drawing.Point(92, 132);
-            this.dtpNgayDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNgayDung.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayDung.Name = "dtpNgayDung";
             this.dtpNgayDung.Size = new System.Drawing.Size(94, 20);
             this.dtpNgayDung.TabIndex = 4;
@@ -142,7 +142,7 @@
             // txtMaPhieu
             // 
             this.txtMaPhieu.Location = new System.Drawing.Point(92, 20);
-            this.txtMaPhieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaPhieu.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaPhieu.Name = "txtMaPhieu";
             this.txtMaPhieu.Size = new System.Drawing.Size(181, 20);
             this.txtMaPhieu.TabIndex = 3;
@@ -200,10 +200,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(283, 49);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(287, 36);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(424, 307);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -213,7 +213,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 17);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -224,7 +224,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 283);
+            this.label6.Location = new System.Drawing.Point(29, 275);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
@@ -234,8 +234,8 @@
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(94, 278);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTongTien.Location = new System.Drawing.Point(99, 270);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(143, 20);
             this.txtTongTien.TabIndex = 3;
@@ -243,8 +243,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(74, 310);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(79, 302);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(56, 19);
             this.btnThem.TabIndex = 4;
@@ -254,8 +254,8 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(169, 310);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(174, 302);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(56, 19);
             this.btnSua.TabIndex = 4;
@@ -265,8 +265,8 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(74, 347);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(79, 339);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(56, 19);
             this.btnXoa.TabIndex = 4;
@@ -276,8 +276,8 @@
             // 
             // btnQuayLai
             // 
-            this.btnQuayLai.Location = new System.Drawing.Point(169, 347);
-            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuayLai.Location = new System.Drawing.Point(174, 339);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(56, 19);
             this.btnQuayLai.TabIndex = 4;
@@ -297,7 +297,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyPhieuDatBan";
             this.Text = "QuanLyPhieuDatBan";
             this.Load += new System.EventHandler(this.QuanLyPhieuDatBan_Load);

@@ -24,11 +24,11 @@ namespace BTL_LTTQNe
             InitializeComponent();
             if (i == 1)
             {
-                OpenChildForm(new FormTimKiem(), sender);
+                OpenChildForm(new FormTimKiem(), sender,"Tìm kiếm");
             }
             if (i == 2)
             {
-                OpenChildForm(new FormTimkiemMonAn(), sender);
+                OpenChildForm(new FormTimkiemMonAn(), sender, "Tìm kiếm");
             }
         }
 
@@ -64,7 +64,7 @@ namespace BTL_LTTQNe
             }
         }
 
-        public void OpenChildForm(Form childForm, object btnSender)
+        public void OpenChildForm(Form childForm, object btnSender,string title)
         {
             if (activeForm != null)
             {
@@ -79,45 +79,44 @@ namespace BTL_LTTQNe
             panelDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
+            lblTitle.Text = title;
         }
 
-	/*	private void button1_Click(object sender, EventArgs e)
-		{
-			FormTimKiem otherForm = new FormTimKiem();
-			otherForm.Show();
-			this.Hide();
-		}
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormTimkiemMonAn otherForm = new FormTimkiemMonAn();
-            otherForm.Show();
-            this.Hide();
-        }*/
 
         private void btnQLMA_Click(object sender, EventArgs e)
         {
+            string title = "Quản lý món ăn";
             ActiveButton(sender);
-            OpenChildForm(new QuanLyMonAn(), sender);
+            QuanLyMonAn form = new QuanLyMonAn();
+            OpenChildForm(new QuanLyMonAn(), sender,title);
         }
 
         private void btnPDB_Click(object sender, EventArgs e)
         {
+            string title = "Quản lý phiếu đặt bàn";
             ActiveButton(sender);
-            OpenChildForm(new QuanLyPhieuDatBan(), sender);
+            OpenChildForm(new QuanLyPhieuDatBan(), sender, title);
 
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
+            string title = "Báo cáo";
             ActiveButton(sender);
-            OpenChildForm(new FormBaocao(), sender);
+            OpenChildForm(new FormBaocao(), sender, title);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new FormTimKiem(), sender);
+            string title = "Tìm kiếm";
+            OpenChildForm(new FormTimKiem(), sender, title);
+        }
+
+        private void btnQLNL_Click(object sender, EventArgs e)
+        {
+            string title = "Quản lý nguyên liệu";
+            ActiveButton(sender);
+            OpenChildForm(new FormQLNguyenLieu(), sender, title);
         }
     }
 }

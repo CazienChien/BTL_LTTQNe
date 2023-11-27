@@ -96,6 +96,12 @@
     <Compile Include="FormBaocao.designer.cs">
       <DependentUpon>FormBaocao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLNguyenLieu.designer.cs">
+      <DependentUpon>FormQLNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBaocao.resx">
       <DependentUpon>FormBaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLNguyenLieu.resx">
+      <DependentUpon>FormQLNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>

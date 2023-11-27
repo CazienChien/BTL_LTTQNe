@@ -56,14 +56,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(22, 24);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(698, 285);
+            this.dataGridView1.Size = new System.Drawing.Size(473, 287);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // btnthem
             // 
-            this.btnthem.Location = new System.Drawing.Point(509, 368);
+            this.btnthem.Location = new System.Drawing.Point(446, 380);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(102, 42);
             this.btnthem.TabIndex = 15;
@@ -76,14 +76,14 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(389, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(809, 317);
+            this.groupBox2.Size = new System.Drawing.Size(530, 317);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin món ăn";
             // 
             // btnxoa
             // 
-            this.btnxoa.Location = new System.Drawing.Point(800, 368);
+            this.btnxoa.Location = new System.Drawing.Point(737, 380);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(102, 42);
             this.btnxoa.TabIndex = 17;
@@ -93,7 +93,7 @@
             // 
             // btnsua
             // 
-            this.btnsua.Location = new System.Drawing.Point(655, 368);
+            this.btnsua.Location = new System.Drawing.Point(592, 380);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(102, 42);
             this.btnsua.TabIndex = 18;
@@ -231,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
-            this.ClientSize = new System.Drawing.Size(1262, 450);
+            this.ClientSize = new System.Drawing.Size(951, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnsua);
             this.Controls.Add(this.btnxoa);
