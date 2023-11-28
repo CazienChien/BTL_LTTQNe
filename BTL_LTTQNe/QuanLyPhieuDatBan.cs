@@ -85,43 +85,37 @@ namespace BTL_LTTQNe
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-         
-          
-           string sql = "INSERT INTO PhieuDatBan (ma_phieu, ma_khach, ma_nhan_vien, ngay_dat, ngay_dung, tong_tien) VALUES"
+            try
+            {
+                string sql = "INSERT INTO PhieuDatBan (ma_phieu, ma_khach, ma_nhan_vien, ngay_dat, ngay_dung, tong_tien) VALUES"
                 + "(N'" + txtMaPhieu.Text + "'," +
                    "N'" + comboBoxKhachHang.Text + "'," +
                    "N'" + comboBoxNhanVien.Text + "'," +
                    "N'" + dtpNgayDatBan.Text + "'," +
                    "N'" + dtpNgayDung.Text + "'," +
                    "N'" + txtTongTien.Text + "')";
-            /*string sql1 = "INSERT INTO ChiTietPhieuDatBan (ma_phieu, ma_mon_an, ma_loai, so_luong, giam_gia, thanh_tien, CONST) VALUES " +
-                    "(N'" + txtMaPhieu.Text + "', " +
-                    "N'1', N'1', " +
-                    txtSoLuong.Text + ", 0.1, 100.50)";*/
+                ChiTietPhieuDatBan otherForm = new ChiTietPhieuDatBan();
+                otherForm.Show();
+                this.Hide();
+                processsData.RunSQL(sql);
+                LoadDataGridView();
 
-
-
-
-            ChiTietPhieuDatBan otherForm = new ChiTietPhieuDatBan();
-            otherForm.Show();
-            this.Hide();
-
-
-
-
-            processsData.RunSQL(sql);
-           // processsData.RunSQL(sql1);
-
-            LoadDataGridView();
-        }
+            }
+			catch (Exception ex)
+			{
+				MessageBox.Show("Lỗi khi thực hiện thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string sql2 = "delete from PhieuDatBan where ma_phieu=N'" + txtMaPhieu.Text + "'";
-            processsData.RunSQL(sql2);
+            if (MessageBox.Show("Xóa phiếu đặt bàn này?", "Xóa sản phẩm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string sql2 = "delete from PhieuDatBan where ma_phieu=N'" + txtMaPhieu.Text + "'";
+                processsData.RunSQL(sql2);
 
-            LoadDataGridView();
+                LoadDataGridView();
+            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -15,7 +15,7 @@ namespace BTL_LTTQNe
 {
 	public partial class QuanLyMonAn : Form
 	{
-		string stringcon = @"Data Source=GBPC;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
+		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
 		SqlConnection con;
 		SqlCommand cmd;
 		SqlDataAdapter adapter = new SqlDataAdapter();	
@@ -79,15 +79,16 @@ namespace BTL_LTTQNe
 					cmd.CommandText = "INSERT INTO MonAn (ma_mon_an, ten_mon_an, ma_cong_dung, ma_loai, cach_lam, yeu_cau) VALUES (N'" + txtmamonan.Text + "', N'" + txttenmonan.Text + "', N'" + txtcongdung.Text + "', N'" + txtloai.Text + "', N'" + txtcachlam.Text + "', N'" + txtyeucau.Text + "')";
 					cmd.ExecuteNonQuery();
 					loaddata();
+				QuanLyNguyenLieuMonAn quanLyNguyenLieuForm = new QuanLyNguyenLieuMonAn();
+				quanLyNguyenLieuForm.Show();
+				this.Hide();
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show("Lỗi khi thực hiện thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 			
-			QuanLyNguyenLieuMonAn quanLyNguyenLieuForm = new QuanLyNguyenLieuMonAn();
-			quanLyNguyenLieuForm.Show();
-			this.Hide();
+			
 		}
 		private void btntinhdongia_Click(object sender, EventArgs e)
 		{

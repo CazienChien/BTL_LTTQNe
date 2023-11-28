@@ -14,7 +14,7 @@ namespace BTL_LTTQNe
 {
 	public partial class QuanLyNguyenLieuMonAn : Form
 	{
-		string stringcon = @"Data Source=GBPC;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
+		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
 		SqlConnection con;
 		SqlCommand cmd;
 		ProcessDatabase Process = new ProcessDatabase();
@@ -57,12 +57,6 @@ namespace BTL_LTTQNe
 
 		}
 
-		private void btnquaylai_Click(object sender, EventArgs e)
-		{
-			QuanLyMonAn quanLyMonAnForm = new QuanLyMonAn();
-			quanLyMonAnForm.Show();
-			this.Close();
-		}
 
 		private void btnthem_Click(object sender, EventArgs e)
 		{
@@ -77,6 +71,13 @@ namespace BTL_LTTQNe
 			{
 				MessageBox.Show("Lỗi khi thực hiện thêm dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Form1 otherForm = new Form1();
+			otherForm.Show();
+			this.Hide();
 		}
 	}
 }

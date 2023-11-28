@@ -45,7 +45,7 @@ namespace BTL_LTTQNe
 
         private void btnQuayLai1_Click(object sender, EventArgs e)
         {
-            QuanLyPhieuDatBan otherForm = new QuanLyPhieuDatBan();
+            Form1 otherForm = new Form1();
             otherForm.Show();
             this.Hide();
         }

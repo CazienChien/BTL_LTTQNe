@@ -27,8 +27,10 @@ namespace BTL_LTTQNe
             dataGridView1.Columns[5].HeaderText = "Đơn giá bán";
             dataGridView1.Columns[6].HeaderText = "Công dụng";
             dataGridView1.Columns[7].HeaderText = "Yêu cầu";
-            dataGridView1.Columns[8].HeaderText = "Chống chỉ định";
-        }
+            dataGridView1.Columns[8].HeaderText = "Ngay nhap";
+			dataGridView1.Columns[9].HeaderText = "Chống chỉ định";
+
+		}
 
 		private void FormTimKiem_Load(object sender, EventArgs e)
 		{
@@ -50,19 +52,19 @@ namespace BTL_LTTQNe
             string query = "SELECT * FROM NguyenLieu WHERE";
             if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) &&!string.IsNullOrEmpty(textBox3.Text))
             {
-                query += " ma_nguyen_lieu = '" + textBox1.Text + "' AND cong_dung = N'" + textBox2.Text + "'" + "' AND chong_chi_dinh = N'" + textBox3.Text + "'";
+                query += " ten_nguyen_lieu = N'" + textBox1.Text + "' AND cong_dung = N'" + textBox2.Text + "'" + "' AND chong_chi_dinh = N'" + textBox3.Text + "'";
             }
             else if (!string.IsNullOrEmpty(textBox1.Text))
             {
-                query += " ma_nguyen_lieu = '" + textBox1.Text + "'";
+                query += " ten_nguyen_lieu = N'" + textBox1.Text + "'";
             }
             else if (!string.IsNullOrEmpty(textBox1.Text)&& !string.IsNullOrEmpty(textBox3.Text))
             {
-                query += " ma_nguyen_lieu = '" + textBox1.Text + "'"+ " chong_chi_dinh = N'" + textBox3.Text + "'";
+                query += " ten_nguyen_lieu = N'" + textBox1.Text + "'"+ " chong_chi_dinh = N'" + textBox3.Text + "'";
             }
             else if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
             {
-                query += " ma_nguyen_lieu = '" + textBox1.Text + "'" + " cong_dung = N'" + textBox2.Text + "'";
+                query += " ten_nguyen_lieu = N'" + textBox1.Text + "'" + " cong_dung = N'" + textBox2.Text + "'";
             }
             else if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text))
             {
