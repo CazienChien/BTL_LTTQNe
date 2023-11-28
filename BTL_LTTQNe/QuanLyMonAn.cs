@@ -15,8 +15,10 @@ namespace BTL_LTTQNe
 {
 	public partial class QuanLyMonAn : Form
 	{
-		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
-		SqlConnection con;
+/*		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;User ID=sa;Password=123";
+*/        string stringcon = @"Data Source=GBPC;Initial Catalog=Food_Ind_Management;Integrated Security=True";
+
+        SqlConnection con;
 		SqlCommand cmd;
 		SqlDataAdapter adapter = new SqlDataAdapter();	
 		DataTable table = new DataTable();

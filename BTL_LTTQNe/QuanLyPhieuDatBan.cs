@@ -46,9 +46,7 @@ namespace BTL_LTTQNe
             comboBoxNhanVien.DataSource = processsData.DocBang("select ma_khach from KhachHang");
             comboBoxNhanVien.DisplayMember = "ma_khach";
         }
-
-
-
+  
 
 
         private void label6_Click(object sender, EventArgs e)

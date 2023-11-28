@@ -58,11 +58,14 @@ namespace BTL_LTTQNe
         private void btnTKPDB_Click(object sender, EventArgs e)
         {
             dgvThongKe.DataSource = process.DocBang("select * from PhieuDatBan");
-
+            FormBaoCaoPDB formReport = new FormBaoCaoPDB();
+            formReport.Show();
+            this.Hide();
         }
 
         private void btnTongTienPDB_Click(object sender, EventArgs e)
         {
+            List<BaocaoTongtien> list = new List<BaocaoTongtien>();
             string sql = "SELECT " +
                          "  MONTH(ngay_dat) AS Thang, " +
                          "  YEAR(ngay_dat) AS Nam, " +
@@ -75,12 +78,52 @@ namespace BTL_LTTQNe
             {
                 sql += " AND MONTH(ngay_dat) = '" + cbThangPDB.Text + "' AND YEAR(ngay_dat) = '" + cbNamPDB.Text + "' GROUP BY MONTH(ngay_dat), YEAR(ngay_dat)";
                 dgvThongKe.DataSource = process.DocBang(sql);
-            }
+                System.Data.DataTable dataTable = process.DocBang(sql);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    list.Add(new BaocaoTongtien
+                    {
+                        Thang = Convert.ToInt32(row["Thang"]),
+                        Nam = Convert.ToInt32(row["Nam"]),
+                        TongTienTheoThang = Convert.ToDouble(row["TongTienTheoThang"]),
+                    });
+                }
+                if (MessageBox.Show("Bạn có muốn xuất bao cao không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    FormReport formReport = new FormReport(list);
+                    formReport.Show();
+                    this.Hide();
 
-            if (!string.IsNullOrEmpty(cbNamPDB.Text) && string.IsNullOrEmpty(cbQuyPDB.Text) && string.IsNullOrEmpty(cbThangPDB.Text))
+                }
+            }
+            string sql1 = "SELECT " +
+                 "  YEAR(ngay_dat) AS Nam, " +
+                 "  SUM(tong_tien) AS TongTienTheoNam " +
+                 "FROM " +
+                 "  PhieuDatBan " +
+                 "WHERE 1 = 1 "; // Thêm điều kiện mặc định để dễ dàng thêm điều kiện tiếp theo
+
+            if (!string.IsNullOrEmpty(cbNamPDB.Text))
             {
-                sql += " AND YEAR(ngay_dat) = '" + cbNamPDB.Text + "' GROUP BY YEAR(ngay_dat)";
-                dgvThongKe.DataSource = process.DocBang(sql);
+                sql1 += $" AND YEAR(ngay_dat) = '{cbNamPDB.Text}' GROUP BY YEAR(ngay_dat)";
+                dgvThongKe.DataSource = process.DocBang(sql1);
+
+                System.Data.DataTable dataTable = process.DocBang(sql1);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    list.Add(new BaocaoTongtien
+                    {
+                        Nam = Convert.ToInt32(row["Nam"]),
+                        TongTienTheoNam = Convert.ToDouble(row["TongTienTheoNam"]),
+                    });
+                }
+                if (MessageBox.Show("Bạn có muốn xuất bao cao  không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    FormReport formReport = new FormReport(list);
+                    formReport.Show();
+                    this.Hide();
+
+                }
             }
 
             string sql2 = "SELECT " +
@@ -96,11 +139,32 @@ namespace BTL_LTTQNe
                 sql2 += " AND DATEPART(QUARTER, ngay_dat) = '" + cbQuyPDB.Text + "' AND YEAR(ngay_dat) = '" + cbNamPDB.Text + "' GROUP BY " +
                         "  DATEPART(QUARTER, ngay_dat), YEAR(ngay_dat);";
                 dgvThongKe.DataSource = process.DocBang(sql2);
+                System.Data.DataTable dataTable = process.DocBang(sql2);
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    list.Add(new BaocaoTongtien
+                    {
+                        Quy = Convert.ToInt32(row["Quy"]),
+                        TongTienTheoThang = Convert.ToDouble(row["TongTienTheoQuy"]),
+                    });
+                }
+
+               
+                if (MessageBox.Show("Bạn có muốn xuất bao cao  không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    FormReport formReport = new FormReport(list);
+                    formReport.Show();
+                    this.Hide();
+
+                }
+
             }
             else if(string.IsNullOrEmpty(cbNamPDB.Text) && string.IsNullOrEmpty(cbQuyPDB.Text) && string.IsNullOrEmpty(cbThangPDB.Text))
             {
                 MessageBox.Show("Vui lòng chọn năm và quý hoặc năm và tháng hoặc chỉ năm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
         }
 
 

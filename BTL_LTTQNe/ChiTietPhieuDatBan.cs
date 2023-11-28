@@ -46,18 +46,18 @@ namespace BTL_LTTQNe
             cbml.SelectedIndex = 0;
         }
 
-    /*    private void btnThem1_Click(object sender, EventArgs e)
+        private void btnThem1_Click(object sender, EventArgs e)
         {
             string sql1 = "INSERT INTO ChiTietPhieuDatBan (ma_phieu, ma_mon_an, ma_loai, so_luong, giam_gia, thanh_tien) VALUES"
               + "(N'" + txtMaPhieu.Text + "'," +
-                 "N'" + txtMaMonAn.Text + "'," +
-                 "N'" + txtMaLoai.Text + "'," +
+                 "N'" + cbMMA.Text + "'," +
+                 "N'" + cbml.Text + "'," +
                  "N'" + txtSoLuong.Text + "'," +
                  "N'" + txtGiamGia.Text + "'," +
                  "N'" + txtThanhTien.Text + "')";
             processssData.RunSQL(sql1);
             LoadDataGridView2();
-        }*/
+        }
 
         private void btnQuayLai1_Click(object sender, EventArgs e)
         {
