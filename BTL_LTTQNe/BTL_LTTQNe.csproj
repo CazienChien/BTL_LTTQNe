@@ -217,6 +217,18 @@
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReportNXNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportNXNguyenLieu.designer.cs">
+      <DependentUpon>FormReportNXNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportTTMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportTTMonAn.designer.cs">
+      <DependentUpon>FormReportTTMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTimKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +281,12 @@
     <EmbeddedResource Include="FormReport.resx">
       <DependentUpon>FormReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportNXNguyenLieu.resx">
+      <DependentUpon>FormReportNXNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportTTMonAn.resx">
+      <DependentUpon>FormReportTTMonAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,9 +312,11 @@
     <EmbeddedResource Include="QuanLyPhieuDatBan.resx">
       <DependentUpon>QuanLyPhieuDatBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="phieudatbanRP.rdlc">
+    <EmbeddedResource Include="ThongKe\phieudatbanRP.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\ReportNXNguyenLieu.rdlc" />
+    <EmbeddedResource Include="ThongKe\ReportTTMonAn.rdlc" />
     <EmbeddedResource Include="ThongKe\TongtienNL.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -336,9 +356,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\list-bgn.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\add.png" />

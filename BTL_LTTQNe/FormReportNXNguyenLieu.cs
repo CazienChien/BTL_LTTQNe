@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace BTL_LTTQNe
 {
-    public partial class FormBaoCaoPDB : Form
+    public partial class FormReportNXNguyenLieu : Form
     {
-        public FormBaoCaoPDB()
+        public FormReportNXNguyenLieu()
         {
             InitializeComponent();
             this.reportViewer1.LocalReport.DataSources.Clear();
@@ -23,20 +23,20 @@ namespace BTL_LTTQNe
 
             reportViewer1.LocalReport.ReportEmbeddedResource =
 
-            "BTL_LTTQNe.ThongKe.phieudatbanRP.rdlc";
+            "BTL_LTTQNe.ThongKe.ReportNXNguyenLieu.rdlc";
 
             ReportDataSource rpd = new ReportDataSource();
 
-            rpd.Name = "PDB";
+            rpd.Name = "DataSetNguyenLieu";
 
-            rpd.Value = pd.DocBang("select * from PhieuDatBan");
+            rpd.Value = pd.DocBang("SELECT * FROM NguyenLieu WHERE MONTH(ngay_nhap) = MONTH(GETDATE()) AND YEAR(ngay_nhap) = YEAR(GETDATE()); ");
 
             reportViewer1.LocalReport.DataSources.Add(rpd);
 
             this.reportViewer1.RefreshReport();
         }
 
-        private void FormBaoCaoPDB_Load(object sender, EventArgs e)
+        private void FormReportNXNguyenLieu_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();

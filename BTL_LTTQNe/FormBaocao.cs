@@ -47,12 +47,18 @@ namespace BTL_LTTQNe
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             dgvThongKe.DataSource = process.DocBang("select * from MonAn");
+            FormReportTTMonAn formReport = new FormReportTTMonAn();
+            formReport.Show();
+            this.Hide();
         }
 
         private void btnTHNX_Click(object sender, EventArgs e)
         {
-
             dgvThongKe.DataSource = process.DocBang("SELECT * FROM NguyenLieu WHERE MONTH(ngay_nhap) = MONTH(GETDATE()) AND YEAR(ngay_nhap) = YEAR(GETDATE()); ");
+            FormReportNXNguyenLieu formReport = new FormReportNXNguyenLieu();
+            formReport.Show();
+            this.Hide();
+        
         }
 
         private void btnTKPDB_Click(object sender, EventArgs e)
