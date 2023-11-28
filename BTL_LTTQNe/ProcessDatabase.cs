@@ -11,8 +11,11 @@ namespace BTL_LTTQ_Ne
 {
 	internal class ProcessDatabase
 	{
-		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;Integrated Security=True";
-		SqlConnection con;
+/*		string stringcon = @"Data Source=MSI\GB;Initial Catalog=Food_Ind_Management;Integrated Security=True";
+*/       
+		string stringcon = @"Data Source=GBPC;Initial Catalog=Food_Ind_Management;Integrated Security=True";
+
+        SqlConnection con;
 		public void KetNoi()
 		{
 			con = new SqlConnection(stringcon);
@@ -34,7 +37,29 @@ namespace BTL_LTTQ_Ne
 			DongKetNoi();
 			return tb;
 		}
-		public void CapNhat(string sql)
+
+        public DataTable DocBang2(string sql, SqlParameter[] parameter = null)
+        {
+            DataTable tb = new DataTable();
+            KetNoi();
+
+            using (SqlCommand command = new SqlCommand(sql, con))
+            {
+                // Thêm tham số nếu có
+                if (parameter != null)
+                {
+                    command.Parameters.AddRange(parameter);
+                }
+
+                SqlDataAdapter adap = new SqlDataAdapter(command);
+                adap.Fill(tb);
+            }
+
+            DongKetNoi();
+            return tb;
+        }
+
+        public void CapNhat(string sql)
 		{
 			SqlCommand cmm = new SqlCommand();
 			KetNoi();
